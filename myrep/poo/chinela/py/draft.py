@@ -17,7 +17,8 @@ class Chinela:
     
 def main():
     chinela = Chinela()
-    
+    while True:
+        
         
 
 

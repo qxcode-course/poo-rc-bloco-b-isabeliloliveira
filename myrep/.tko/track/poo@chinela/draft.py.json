@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-15_14-31-10",
+            "content": "class Chinela:\n    def __init__(self, tamanho: int):\n        self.tamanho: int = 0 \n        \n    def _str_(self) -> str:\n        return f\"Parabens, voc\u00c3\u00aa comprou uma chinela tamanho: {self.tamanho}\"\n\n    def set_tamanho(self, t: int) -> bool:\n        if t>=20 and t<=50 and t %2==0:\n            self.tamanho=t\n            return\n        else:\n            print()\n\n    def get_tamanho(self):\n        return self.__tamanho\n    \ndef main():\n    chinela = Chinela()\n    \n        \n\n\n\nmain()",
+            "lines": "25"
+        }
+    ]
+}
