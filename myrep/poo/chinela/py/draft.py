@@ -9,7 +9,7 @@ class Chinela:
 
 
 def main():
-    # chinela: Chinela=Chinela(" ")
+    chinela: Chinela=Chinela(" ")
     while True:
         line: str=input()
         args: list[str]= line.split(" ") 
