@@ -1,4 +1,5 @@
-class Pessoa(self, nome: str):
+class Pessoa:
+    def __init__(self, nome: str):
     self.nome = nome
     
 class Moto:
