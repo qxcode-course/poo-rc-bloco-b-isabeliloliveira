@@ -2,8 +2,18 @@
     "patches": [
         {
             "label": "2025-10-15_14-31-10",
-            "content": "class Chinela:\n    def __init__(self, tamanho: int):\n        self.tamanho: int = 0 \n        \n    def _str_(self) -> str:\n        return f\"Parabens, voc\u00c3\u00aa comprou uma chinela tamanho: {self.tamanho}\"\n\n    def set_tamanho(self, t: int) -> bool:\n        if t>=20 and t<=50 and t %2==0:\n            self.tamanho=t\n            return\n        else:\n            print()\n\n    def get_tamanho(self):\n        return self.__tamanho\n    \ndef main():\n    chinela = Chinela()\n    \n        \n\n\n\nmain()",
+            "content": "@@ -463,237 +463,8 @@\n     \n-while chinela.getTamanho() == 0:%0A        print(%22Digite seu tamanho de chinela%22)%0A        tamanho = int(input()) %0A        chinela.setTamanho(tamanho)  %0A%0A    print(%22Parabens, voc%C3%83%C2%AA comprou uma chinela tamanho%22, chinela.getTamanho())\n %0A   \n",
             "lines": "25"
+        },
+        {
+            "label": "2025-10-16_02-01-54",
+            "content": "@@ -98,15 +98,13 @@\n def \n-_\n _str_\n-_\n (sel\n@@ -400,24 +400,26 @@\n return self.\n+__\n tamanho%0A    \n@@ -594,22 +594,23 @@\n .set\n-_t\n+T\n amanho(\n-valor\n+tamanho\n )  %0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2025-10-16_02-47-52",
+            "content": "class Chinela:\n    def __init__(self, tamanho: int):\n        self.tamanho: int = 0 \n        \n    def __str__(self) -> str:\n        return f\"Parabens, voc\u00c3\u00aa comprou uma chinela tamanho: {self.tamanho}\"\n\n    def set_tamanho(self, t: int) -> bool:\n        if t>=20 and t<=50 and t %2==0:\n            self.tamanho=t\n            return\n        else:\n            print()\n\n    def get_tamanho(self):\n        return self.tamanho\n    \ndef main():\n    chinela = Chinela()\n    while chinela.getTamanho() == 0:\n        print(\"Digite seu tamanho de chinela\")\n        tamanho = int(input()) \n        chinela.set_tamanho(valor)  \n\n    print(\"Parabens, voc\u00c3\u00aa comprou uma chinela tamanho\", chinela.getTamanho())\n        \n\n\n\nmain()",
+            "lines": "30"
         }
     ]
 }

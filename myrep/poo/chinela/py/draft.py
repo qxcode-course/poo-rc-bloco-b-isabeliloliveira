@@ -2,7 +2,7 @@ class Chinela:
     def __init__(self, tamanho: int):
         self.tamanho: int = 0 
         
-    def _str_(self) -> str:
+    def __str__(self) -> str:
         return f"Parabens, você comprou uma chinela tamanho: {self.tamanho}"
 
     def set_tamanho(self, t: int) -> bool:
@@ -13,12 +13,16 @@ class Chinela:
             print()
 
     def get_tamanho(self):
-        return self.__tamanho
+        return self.tamanho
     
 def main():
     chinela = Chinela()
-    while True:
-        
+    while chinela.getTamanho() == 0:
+        print("Digite seu tamanho de chinela")
+        tamanho = int(input()) 
+        chinela.set_tamanho(valor)  
+
+    print("Parabens, você comprou uma chinela tamanho", chinela.getTamanho())
         
 
 
