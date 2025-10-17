@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-17_16-48-46",
+            "content": "@@ -495,33 +495,33 @@\n (%22fail: hora inv\n-a\n+%C3%A1\n lida!%22)%0A        \n@@ -837,25 +837,25 @@\n  segundo inv\n-a\n+%C3%A1\n lido!%22)%0A    \n@@ -999,17 +999,17 @@\n hora inv\n-a\n+%C3%A1\n lida!%22)%0A\n@@ -1181,25 +1181,25 @@\n : minuto inv\n-a\n+%C3%A1\n lido%22)%0A     \n@@ -1380,17 +1380,17 @@\n undo inv\n-a\n+%C3%A1\n lido%22)%0A \n",
+            "lines": "109"
+        },
+        {
+            "label": "2025-10-17_16-50-00",
+            "content": "@@ -500,35 +500,36 @@\n l: hora invalida\n+!\n %22)%0A\n-\n             retu\n@@ -666,24 +666,25 @@\n uto inv%C3%A1lido\n+!\n %22)%0A         \n@@ -838,32 +838,33 @@\n segundo invalido\n+!\n %22)%0A            r\n@@ -958,32 +958,32 @@\n  %3C0 or hora%3E23:%0A\n-\n             prin\n@@ -1004,16 +1004,17 @@\n invalida\n+!\n %22)%0A     \n",
+            "lines": "109"
+        },
+        {
+            "label": "2025-10-17_16-50-23",
+            "content": "@@ -656,33 +656,33 @@\n fail: minuto inv\n-a\n+%C3%A1\n lido%22)%0A         \n",
+            "lines": "109"
+        },
+        {
+            "label": "2025-10-17_16-50-50",
+            "content": "@@ -1214,18 +1214,16 @@\n __minuto\n-=0\n %0A       \n@@ -1410,18 +1410,16 @@\n _segundo\n-=0\n %0A       \n",
+            "lines": "109"
+        },
+        {
+            "label": "2025-10-17_16-51-45",
+            "content": "class Watch:\n    def __init__(self):\n        self.__hora : int = 0\n        self.__minuto: int = 0\n        self.__segundo: int = 0\n\n    def getHora(self):\n        return self.__hora\n    \n    def getMinuto(self):\n        return self.__minuto\n\n    def getSegundo(self):\n        return self.__segundo\n\n    def __str__(self) -> str:\n        return f\"{self.getHora():02}:{self.getMinuto():02}:{self.getSegundo():02}\"\n\n    def setHora(self, hora: int):\n        if hora <0 or hora>23:\n            print(\"fail: hora invalida\")\n            return\n        self.__hora=hora\n\n    def setMinuto(self, minuto: int):\n        if minuto <0 or minuto>59:\n            print(\"fail: minuto invalido\")\n            return\n        self.__minuto=minuto\n\n    \n    def setSegundo(self, segundo: int):\n        if segundo <0 or segundo>59:\n            print(\"fail: segundo invalido\")\n            return\n        self.__segundo=segundo\n\n\n    def s_hora(self, hora: int):\n        if hora <0 or hora>23:\n            print(\"fail: hora invalida\")\n            self.__hora=0\n            return\n        self.__hora=hora\n\n    def s_minuto(self, minuto: int):\n        if minuto<0 or minuto>59:\n            print(\"fail: minuto invalido\")\n            self.__minuto=0\n            return\n        self.__minuto= minuto\n\n    def s_segundo(self, segundo: int):\n        if segundo<0 or segundo>59:\n            print(\"fail: segundo invalido\")\n            self.__segundo=0\n            return\n        self.__segundo= segundo\n\n    def seg_pular1(self):\n        if self.getSegundo() == 59:\n            self.setSegundo(0)\n            if self.getMinuto() == 59:\n                self.setMinuto(0)\n                if self.getHora() == 23:\n                    self.setHora(0)\n                else:\n                    self.setHora(self.getHora()+1)\n                    \n            else:\n                self.setMinuto(self.getMinuto()+1)\n        \n        else:\n            self.setSegundo(self.getSegundo()+1)\n\n\ndef main():\n    watch= Watch()\n    \n    \n    while True:\n        line: str=input()\n        print(\"$\" +line)\n        \n        args: list[str] = line.split(\" \")\n        \n        if args[0]==\"end\":\n            break\n        \n        elif args[0]==\"show\":\n            print(watch)  \n        \n        elif args [0] == \"set\":\n            args[1]=watch.setHora(int(args[1]))\n            args[2]=watch.setMinuto(int(args[2]))\n            args[3]=watch.setSegundo(int(args[3]))\n            \n        elif args [0] == \"init\":\n            args[1]=watch.s_hora(int(args[1]))\n            args[2]=watch.s_minuto(int(args[2]))\n            args[3]=watch.s_segundo(int(args[3]))\n        \n        elif args[0] == \"next\":\n            watch.seg_pular1()\n\nmain()\n\n            \n        ",
+            "lines": "109"
+        }
+    ]
+}
