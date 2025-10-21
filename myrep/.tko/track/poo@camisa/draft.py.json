@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-18_15-50-12",
+            "content": "@@ -526,16 +526,18 @@\n  Camisa(\n+%22%22\n )%0A    wh\n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-10-18_15-50-46",
+            "content": "@@ -616,22 +616,23 @@\n         \n-camisa\n+tamanho\n  = input\n@@ -661,22 +661,23 @@\n Tamanho(\n-camisa\n+tamanho\n ) %0A     \n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-10-18_15-51-29",
+            "content": "@@ -616,23 +616,22 @@\n         \n-tamanho\n+camisa\n  = input\n@@ -660,23 +660,22 @@\n Tamanho(\n-tamanho\n+camisa\n ) %0A     \n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-10-18_15-52-34",
+            "content": "@@ -212,19 +212,18 @@\n )!=%22PP%22 \n-and\n+or\n  tamanho\n@@ -236,19 +236,18 @@\n ()!=%22P%22 \n-and\n+or\n  tamanho\n@@ -260,19 +260,18 @@\n ()!=%22M%22 \n-and\n+or\n  tamanho\n@@ -284,19 +284,18 @@\n ()!=%22G%22 \n-and\n+or\n  tamanho\n@@ -313,11 +313,10 @@\n GG%22 \n-and\n+or\n  tam\n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-10-18_15-54-17",
+            "content": "@@ -89,18 +89,17 @@\n  def get\n-_t\n+T\n amanho(s\n@@ -150,18 +150,17 @@\n  def set\n-_t\n+T\n amanho(s\n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-10-18_15-58-46",
+            "content": "@@ -660,18 +660,17 @@\n misa.set\n-_t\n+T\n amanho(t\n@@ -751,18 +751,17 @@\n misa.get\n-_t\n+T\n amanho()\n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-10-18_15-59-05",
+            "content": "@@ -547,34 +547,33 @@\n while camisa.get\n-_t\n+T\n amanho()==%22%22:%0A  \n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-10-18_15-59-21",
+            "content": "class Camisa:\n    def __init__(self):\n        self.__tamanho: str = \"\"\n        \n    \n    def get_tamanho(self):\n        return self.__tamanho\n    \n    def set_tamanho(self, tamanho: str):\n        if tamanho.upper()!=\"PP\" and tamanho.upper()!=\"P\" and tamanho.upper()!=\"M\" and tamanho.upper()!=\"G\" and tamanho.upper()!=\"GG\" and tamanho.upper()!=\"XG\":\n            print(\"fail: Tamanho de camisa invalido - Tamanhos permitidos: PP, P, M, G, GG e XG\")\n            return\n        self.__tamanho = tamanho\n        \ndef main():\n    camisa = Camisa()\n    while camisa.get_tamanho()==\"\":\n        print(\"Digite seu tamanho de roupa\")\n        tamanho = input() \n        camisa.set_tamanho(tamanho) \n        \n    print(\"Parabens, voc\u00ea comprou uma roupa tamanho\", camisa.get_tamanho())\n    \n\nmain()",
+            "lines": "25"
+        }
+    ]
+}

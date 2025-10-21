@@ -1,0 +1,19 @@
+2025-10-18 15:50:10, MOVE, v:1, k:poo@camisa, mode:PICK
+2025-10-18 15:50:12, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0, size:25
+2025-10-18 15:50:46, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0, size:25
+2025-10-18 15:51:29, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0, size:25
+2025-10-18 15:51:30, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0
+2025-10-18 15:51:30, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0
+2025-10-18 15:51:31, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0
+2025-10-18 15:51:31, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0
+2025-10-18 15:51:31, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0
+2025-10-18 15:52:34, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0, size:25
+2025-10-18 15:52:35, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0
+2025-10-18 15:52:35, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0
+2025-10-18 15:52:36, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0
+2025-10-18 15:52:37, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0
+2025-10-18 15:52:37, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0
+2025-10-18 15:54:17, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0, size:25
+2025-10-18 15:58:46, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0, size:25
+2025-10-18 15:59:05, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0, size:25
+2025-10-18 15:59:21, EXEC, v:1, k:poo@camisa, mode:LOCK, rate:0, size:25
