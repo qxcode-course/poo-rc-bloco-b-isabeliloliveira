@@ -19,7 +19,7 @@ def main():
         tamanho = input() 
         camisa.set_tamanho(tamanho) 
         
-    print("Parabens, você comprou uma roupa tamanho", camisa.get_tamanho())
+    print("Parabens, você comprou uma roupa tamanho", camisa.get_tamanho().upper())
     
 
 main()

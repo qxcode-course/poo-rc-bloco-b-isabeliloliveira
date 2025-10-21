@@ -37,7 +37,22 @@
         },
         {
             "label": "2025-10-18_15-59-21",
-            "content": "class Camisa:\n    def __init__(self):\n        self.__tamanho: str = \"\"\n        \n    \n    def get_tamanho(self):\n        return self.__tamanho\n    \n    def set_tamanho(self, tamanho: str):\n        if tamanho.upper()!=\"PP\" and tamanho.upper()!=\"P\" and tamanho.upper()!=\"M\" and tamanho.upper()!=\"G\" and tamanho.upper()!=\"GG\" and tamanho.upper()!=\"XG\":\n            print(\"fail: Tamanho de camisa invalido - Tamanhos permitidos: PP, P, M, G, GG e XG\")\n            return\n        self.__tamanho = tamanho\n        \ndef main():\n    camisa = Camisa()\n    while camisa.get_tamanho()==\"\":\n        print(\"Digite seu tamanho de roupa\")\n        tamanho = input() \n        camisa.set_tamanho(tamanho) \n        \n    print(\"Parabens, voc\u00ea comprou uma roupa tamanho\", camisa.get_tamanho())\n    \n\nmain()",
+            "content": "@@ -763,24 +763,16 @@\n amanho()\n-.upper()\n )%0A    %0A%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-10-21_13-31-37",
+            "content": "@@ -692,9 +692,9 @@\n     \n-q\n+%0A\n     \n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-10-21_13-32-48",
+            "content": "@@ -684,25 +684,25 @@\n o) %0A        \n-%0A\n+q\n     print(%22P\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-10-21_13-33-15",
+            "content": "class Camisa:\n    def __init__(self):\n        self.__tamanho: str = \"\"\n        \n    \n    def get_tamanho(self):\n        return self.__tamanho\n    \n    def set_tamanho(self, tamanho: str):\n        if tamanho.upper()!=\"PP\" and tamanho.upper()!=\"P\" and tamanho.upper()!=\"M\" and tamanho.upper()!=\"G\" and tamanho.upper()!=\"GG\" and tamanho.upper()!=\"XG\":\n            print(\"fail: Tamanho de camisa invalido - Tamanhos permitidos: PP, P, M, G, GG e XG\")\n            return\n        self.__tamanho = tamanho\n        \ndef main():\n    camisa = Camisa()\n    while camisa.get_tamanho()==\"\":\n        print(\"Digite seu tamanho de roupa\")\n        tamanho = input() \n        camisa.set_tamanho(tamanho) \n        \n    print(\"Parabens, voc\u00ea comprou uma roupa tamanho\", camisa.get_tamanho().upper())\n    \n\nmain()",
             "lines": "25"
         }
     ]
