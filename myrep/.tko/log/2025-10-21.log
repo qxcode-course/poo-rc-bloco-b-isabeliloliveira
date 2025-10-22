@@ -39,3 +39,5 @@
 2025-10-21 13:56:58, EXEC, v:1, k:poo@roupa, mode:FULL, rate:0, size:38
 2025-10-21 13:57:20, EXEC, v:1, k:poo@roupa, mode:FULL, rate:100, size:38
 2025-10-21 14:04:13, MOVE, v:1, k:poo@roupa, mode:BACK
+2025-10-21 15:08:36, MOVE, v:1, k:poo@motoca, mode:PICK
+2025-10-21 15:20:35, EXEC, v:1, k:poo@motoca, mode:FREE, size:49
