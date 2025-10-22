@@ -6,6 +6,11 @@ class Pessoa:
     def __str__(self):
         return f"{self.nome}:{self.idade}"
     
+    # def get_nome(self):
+    #     return
+    
+    def get_idade(self):
+        return self.idade
 class Moto:
     def __init__(self):
         self.__pessoa: Pessoa | None = None #pessoa pode ser pessoa ou pode ser nulo
@@ -16,7 +21,11 @@ class Moto:
         pessoa = self.__pessoa if self.__pessoa != None else "empty"
         return f"power:{self.__potencia}, time:{self.__tempo}, person:({pessoa})"
         
-        
+    
+    def get_pessoa(self):
+        return self.__pessoa
+    
+
     def inserir(self, pessoa: Pessoa) -> bool:
         if self.__pessoa != None:
             print("fail: busy motorcycle")
@@ -36,8 +45,25 @@ class Moto:
     def buyTime(self, time: int):
         self.__tempo += time
         
-    def dirigir(self):
+    def dirigir(self, time: int):
+        if self.__tempo ==0:
+            print("fail: buy time first")
+            return
+        if self.__pessoa == None:
+            print("fail: empty motorcycle")
+            return
+        if self.get_pessoa().get_idade()>10:
+            print("fail: too old to drive")
+            return
+        if self.__tempo<time:
+            print(f"fail: time finished after {self.__tempo} minutes")
+            self.__tempo=0
+            return 
+        self.__tempo-=time
         
+    def buzinar(self):
+        letra = "e"
+        print("P"+(letra*self.__potencia)+"m")
 def main():
     moto = Moto()
 
@@ -53,7 +79,7 @@ def main():
         
         elif args[0] == "enter":
             nome = args[1]  
-            idade = args [2]
+            idade = int(args[2])
             moto.inserir(Pessoa(nome, idade))
             
         elif args[0] == "init":
@@ -70,7 +96,12 @@ def main():
                 
         elif args[0] == "buy":
             moto.buyTime(int(args[1]))
+            
+        elif args[0] == "drive":
+            moto.dirigir(int(args[1]))
         
+        elif args[0] == "honk":
+            moto.buzinar()
 main()
 # moto = Moto()
 # moto.inserir(Pessoa("fulano"))
