@@ -5,12 +5,10 @@ class Pessoa:
         
     def __str__(self):
         return f"{self.nome}:{self.idade}"
-    
-    # def get_nome(self):
-    #     return
-    
+
     def get_idade(self):
         return self.idade
+    
 class Moto:
     def __init__(self):
         self.__pessoa: Pessoa | None = None #pessoa pode ser pessoa ou pode ser nulo
