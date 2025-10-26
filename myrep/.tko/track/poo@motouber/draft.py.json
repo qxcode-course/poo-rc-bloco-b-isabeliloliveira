@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-26_03-19-03",
+            "content": "class Pessoa:\n    def __init__(self):\n        self.__nome: str =\"\"\n        self.__dinheiro: int=0\n        \nclass Moto:\n    def __init__(self):\n        self.__custo: int=0\n        self.__motorista: int=0\n        self.__passageiro: int =0\n        \n    def __str__(self):\n        return f\"Cost: {}, Driver:{}:{}, Passenger: {}, \"",
+            "lines": "13"
+        }
+    ]
+}
