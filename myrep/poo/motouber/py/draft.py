@@ -8,6 +8,15 @@ class Pessoa:
         
         def get_dinheiro(self):
             return self.__dinheiro
+        
+        def set_nome(self, nome: str):
+            self.__nome=nome
+            
+        def set_dinheiro(self, dinheiro:int):
+            self.__dinheiro=dinheiro
+            
+        def __str__(self):
+            return f"{self.__nome}:{self.__money}"
             
 class Moto:
     def __init__(self):
@@ -15,12 +24,16 @@ class Moto:
         self.__motorista: Pessoa | None = None
         self.__passageiro: Pessoa | None = None
         
-    def get_Motorista(self):
-        return
-
+    
     def setDrive(self, pessoa: Pessoa):
         if self.getDrive() != None:
             print("fail: já tem um motorista")
+            return
+        self.__motorista = pessoa
+        
+    def setP(self, pessoa: Pessoa|None):
+        if pessoa == None:
+            self.__passag=None
             return
         self.__motorista = pessoa
     
@@ -40,29 +53,19 @@ def main(self):
         elif args[0]=="show":
             print(moto)
         
-        elif args[0] == "enter":
-            nome = args[1]  
-            idade = int(args[2])
-            moto.inserir(Pessoa(nome, idade))
+        elif args[0] == "setPass":
+            nome = args[1]
+            dinheiro = int(args[2])
+            moto.setPass(Pessoa(nome, dinheiro))
             
-        elif args[0] == "init":
-            moto.set_power(int(args[1]))
-            
-        elif args[0] == "leave":
-            
-            pessoa = moto.remover()
-            if pessoa == None:
-                print("fail: empty motorcycle")
-            
-            else:
-                print(f"{pessoa}")
-                
-        elif args[0] == "buy":
-            moto.buyTime(int(args[1]))
+        elif args[0] == "setDriver":
+            nome = args[1]
+            dinheiro = int(args[2])
+            moto.setDriver(Pessoa(nome, dinheiro))
             
         elif args[0] == "drive":
-            moto.dirigir(int(args[1]))
-        
+            moto.setCusto(int(args[1]))
+            
         elif args[0] == "honk":
             moto.buzinar()
 
