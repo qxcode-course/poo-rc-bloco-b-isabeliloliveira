@@ -1,28 +1,29 @@
 class Pessoa:
-    def __init__(self):
-        self.__nome: str =""
-        self.__dinheiro: int=0
+    def __init__(self, nome: str, dinheiro: int):
+        self.__nome: nome
+        self.__dinheiro: dinheiro
         
-        def get_nome(self):
-            return self.__nome
+    def get_nome(self):
+        return self.__nome
         
-        def get_dinheiro(self):
-            return self.__dinheiro
+    def get_dinheiro(self):
+        return self.__dinheiro
         
-        def set_nome(self, nome: str):
-            self.__nome=nome
+    def set_nome(self, nome: str):
+        self.__nome=nome
             
-        def set_dinheiro(self, dinheiro:int):
-            self.__dinheiro=dinheiro
-            
-        def __str__(self):
-            return f"{self.__nome}:{self.__money}"
+    def set_dinheiro(self, dinheiro:int):
+        self.__dinheiro=dinheiro
+        
+        
+    def __str__(self):
+        return f"{self.__nome}:{self.__dinheiro}"
             
 class Moto:
     def __init__(self):
         self.__custo: int=0
         self.__motorista: Pessoa | None = None
-        self.__passageiro: Pessoa | None = None
+        self.__passag: Pessoa | None = None
         
     
     def setDrive(self, pessoa: Pessoa):
@@ -35,10 +36,58 @@ class Moto:
         if pessoa == None:
             self.__passag=None
             return
-        self.__motorista = pessoa
+        if pessoa is not None:
+            print("fail: já tem um passageiro")
+            return
+        self.__passag = pessoa
+        
+    def getDrive(self):
+        return self.__motorista
+            
+    def getPass(self) -> Pessoa | None :
+        return self.__passag
+        
+    def getCusto(self):
+        return self.__custo
+        
+        
+        
+    def LeavePass(self):
+            if self.getDrive() is None:
+                print("fail: não tem motorista")
+                return
+            if self.getPass() is None:
+                print("fail: não tem um passageiro")
+                return
+            
+            passag = self.getPass()
+            motorista = self.getDrive()
+            custo = self.getCusto()
+            
+            if passag.get_dinheiro() < custo:
+                print("fail: Passenger does not have enough money")
+                motorista.set_dinheiro(motorista.get_dinheiro()+custo)
+                passag.set_dinheiro(0)
+                self.__custo = 0
+                self.__passag = None
+                print(f"{passag} left")
+                
+            else:
+                passag.get_money() >= custo
+                motorista.set_dinheiro(motorista.get_dinheiro()+custo)
+                passag.set_dinheiro(passag.get_dinheiro()-custo)
+                self.__custo = 0
+                self.__passag = None
+                print(f"{passag} left")
+        
+
+    def set_custo(self, custo:int):
+        self.__custo += custo
     
     def __str__(self):
-        return f"Cost: {}, Driver:{}:{}, Passenger: {}, "
+        passag = self.__passag if self.__passag != None else "None"
+        motorista = self.__motorista if self.__motorista != None else "None"
+        return f"Cost: {self.__custo}, Driver:{motorista}:{}, Passenger: {passag}"
     
 def main(self):
     moto = Pessoa
@@ -57,7 +106,7 @@ def main(self):
             nome = args[1]
             dinheiro = int(args[2])
             moto.setPass(Pessoa(nome, dinheiro))
-            
+            9
         elif args[0] == "setDriver":
             nome = args[1]
             dinheiro = int(args[2])

@@ -1,0 +1,19 @@
+2025-10-28 02:24:39, MOVE, v:1, k:poo@motouber, mode:PICK
+2025-10-28 02:24:41, EXEC, v:1, k:poo@motouber, mode:FULL, rate:0, size:80
+2025-10-28 02:31:38, EXEC, v:1, k:poo@motouber, mode:FULL, rate:0, size:102
+2025-10-28 02:31:40, EXEC, v:1, k:poo@motouber, mode:FULL, rate:0
+2025-10-28 02:31:40, EXEC, v:1, k:poo@motouber, mode:FULL, rate:0
+2025-10-28 02:31:40, EXEC, v:1, k:poo@motouber, mode:FULL, rate:0
+2025-10-28 02:31:40, EXEC, v:1, k:poo@motouber, mode:FULL, rate:0
+2025-10-28 02:31:40, EXEC, v:1, k:poo@motouber, mode:FULL, rate:0
+2025-10-28 02:31:40, EXEC, v:1, k:poo@motouber, mode:FULL, rate:0
+2025-10-28 02:37:00, EXEC, v:1, k:poo@motouber, mode:FULL, rate:0, size:118
+2025-10-28 02:37:02, EXEC, v:1, k:poo@motouber, mode:FULL, rate:0
+2025-10-28 02:44:57, EXEC, v:1, k:poo@motouber, mode:FULL, rate:0, size:121
+2025-10-28 02:44:57, EXEC, v:1, k:poo@motouber, mode:FULL, rate:0, size:121
+2025-10-28 02:44:59, EXEC, v:1, k:poo@motouber, mode:FULL, rate:0, size:121
+2025-10-28 02:44:59, EXEC, v:1, k:poo@motouber, mode:FULL, rate:0
+2025-10-28 02:44:59, EXEC, v:1, k:poo@motouber, mode:FULL, rate:0
+2025-10-28 02:44:59, EXEC, v:1, k:poo@motouber, mode:FULL, rate:0
+2025-10-28 02:49:40, EXEC, v:1, k:poo@motouber, mode:FULL, rate:0, size:121
+2025-10-28 02:49:40, EXEC, v:1, k:poo@motouber, mode:FULL, rate:0, size:121
