@@ -1,4 +1,4 @@
-class Notebook:
+class Carregador:
     def __init__(self, cap: int):
         self.__potencia = cap
     
@@ -34,6 +34,6 @@ class Bateria:
                       
     
 
-class Carregador:
+class Notebook:
     def __init__(self):
         self.ligado = False
