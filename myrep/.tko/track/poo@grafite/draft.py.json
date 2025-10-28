@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-28_11-02-56",
+            "content": "class Grafite:\n    def __init__(self, thickness: float, hardness: str, size: int):\n        self.__size = size\n        self.__thickness = thickness\n        self.__hardness = hardness\n    \n    def usagePerSheet(self):\n        if self.__hardness == \"HB\":\n            return 1\n        \n        elif self.__hardness == \"2B\":\n            return 2\n        \n        elif self.__hardness == \"4B\":\n            return 4\n        \n        elif self.__hardness == \"6B\":\n            return 6\n        \n        else:\n            return 0\n        \n    def get_thinckness(self):\n        return self.__thickness\n    \n    def get_hardness(self):\n        return self.__hardness\n    \n    def get_size(self):\n        return self.__size\n    \n    def set_size(self, size: int):\n        self.__size = size\n\n    def __str__(self):\n        return f\"[{self.__thickness}:{self.__hardness}:{self.__size}]\"\n    \nclass Lapiseira:\n    def __init__(self):\n        self.tip = None\n        \n    def hasGrafite(self):\n        if self.__size!=None:\n            return True\n    \n        \n    def __str__(self):\n        return f\"calibre: {self.__thickeness}, grafite: [{}:{}:{}]\"\n    \n    \n    \ndef main():\n    \n    \nmain()",
+            "lines": "55"
+        }
+    ]
+}

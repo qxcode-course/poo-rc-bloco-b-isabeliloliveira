@@ -32,3 +32,5 @@
 2025-10-28 08:22:44, EXEC, v:1, k:poo@motouber, mode:FULL, rate:12, size:121
 2025-10-28 08:23:53, EXEC, v:1, k:poo@motouber, mode:FULL, rate:100, size:121
 2025-10-28 08:26:26, MOVE, v:1, k:poo@motouber, mode:BACK
+2025-10-28 11:02:39, MOVE, v:1, k:poo@grafite, mode:PICK
+2025-10-28 11:02:56, EXEC, v:1, k:poo@grafite, mode:FULL, rate:0, size:55

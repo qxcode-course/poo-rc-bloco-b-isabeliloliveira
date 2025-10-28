@@ -37,15 +37,19 @@ class Grafite:
     
 class Lapiseira:
     def __init__(self):
-        self.tip = None
+        self.tip = Grafite | None = None
+        self.__thickness: float = 0
         
     def hasGrafite(self):
         if self.__size!=None:
             return True
-    
+        
+    def set_thickness(self, espessura: float):
+        self.__thickness = espessura
         
     def __str__(self):
-        return f"calibre: {self.__thickeness}, grafite: [{}:{}:{}]"
+        grafite = self.__tip if self.__tip != None else "null"
+        return f"calibre: {self.__thickeness}, grafite: {grafite}"
     
     
     
