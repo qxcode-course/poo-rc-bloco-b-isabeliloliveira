@@ -1,7 +1,7 @@
 class Pessoa:
     def __init__(self, nome: str, dinheiro: int):
-        self.__nome: nome
-        self.__dinheiro: dinheiro
+        self.__nome= nome
+        self.__dinheiro= dinheiro
         
     def get_nome(self):
         return self.__nome
@@ -26,7 +26,7 @@ class Moto:
         self.__passag: Pessoa | None = None
         
     
-    def setDrive(self, pessoa: Pessoa):
+    def setDriver(self, pessoa: Pessoa):
         if self.getDrive() != None:
             print("fail: já tem um motorista")
             return
@@ -36,7 +36,7 @@ class Moto:
         if pessoa == None:
             self.__passag=None
             return
-        if pessoa is not None:
+        if self.__passag is not None:
             print("fail: já tem um passageiro")
             return
         self.__passag = pessoa
@@ -52,7 +52,7 @@ class Moto:
         
         
         
-    def LeavePass(self):
+    def leavePass(self):
             if self.getDrive() is None:
                 print("fail: não tem motorista")
                 return
@@ -73,7 +73,7 @@ class Moto:
                 print(f"{passag} left")
                 
             else:
-                passag.get_money() >= custo
+                passag.get_dinheiro() >= custo
                 motorista.set_dinheiro(motorista.get_dinheiro()+custo)
                 passag.set_dinheiro(passag.get_dinheiro()-custo)
                 self.__custo = 0
@@ -87,10 +87,10 @@ class Moto:
     def __str__(self):
         passag = self.__passag if self.__passag != None else "None"
         motorista = self.__motorista if self.__motorista != None else "None"
-        return f"Cost: {self.__custo}, Driver:{motorista}:{}, Passenger: {passag}"
+        return f"Cost: {self.__custo}, Driver: {motorista}, Passenger: {passag}"
     
-def main(self):
-    moto = Pessoa
+def main():
+    moto = Moto()
     
     while True:
         line = input()
@@ -105,17 +105,17 @@ def main(self):
         elif args[0] == "setPass":
             nome = args[1]
             dinheiro = int(args[2])
-            moto.setPass(Pessoa(nome, dinheiro))
-            9
+            moto.setP(Pessoa(nome, dinheiro))
+            
         elif args[0] == "setDriver":
             nome = args[1]
             dinheiro = int(args[2])
             moto.setDriver(Pessoa(nome, dinheiro))
             
         elif args[0] == "drive":
-            moto.setCusto(int(args[1]))
+            moto.set_custo(int(args[1]))
             
-        elif args[0] == "honk":
-            moto.buzinar()
+        elif args[0] == "leavePass":
+            moto.leavePass()
 
 main()
