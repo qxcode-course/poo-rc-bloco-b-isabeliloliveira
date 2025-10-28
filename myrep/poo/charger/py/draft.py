@@ -36,4 +36,11 @@ class Bateria:
 
 class Notebook:
     def __init__(self):
-        self.ligado = False
+        self.__ligado = False
+        self.__bateria : Bateria | None = None
+        self.__carregador : Carregador| None = None
+    
+    def ligar(self):
+        if self.__ligado==True:
+            print("fail: notebook ja esta ligado")
+         
