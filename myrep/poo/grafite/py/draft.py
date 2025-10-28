@@ -20,7 +20,7 @@ class Grafite:
         else:
             return 0
         
-    def get_thinckness(self):
+    def get_thickness(self):
         return self.__thickness
     
     def get_hardness(self):
@@ -37,7 +37,7 @@ class Grafite:
     
 class Lapiseira:
     def __init__(self):
-        self.__tip = Grafite | None = None
+        self.__tip: Grafite | None = None
         self.__thickness: float = 0
         
     def set_thickness(self, espessura: float):
@@ -81,7 +81,7 @@ class Lapiseira:
         
     def __str__(self):
         grafite = self.__tip if self.__tip != None else "null"
-        return f"calibre: {self.__thickeness}, grafite: {grafite}"
+        return f"calibre: {self.__thickness}, grafite: {grafite}"
     
     
     
@@ -101,8 +101,16 @@ def main():
             hardness = args [2]
             size = args[3]
             grafite = Grafite(float(thickness), hardness, int(size))
+            lapiseira.inserir(grafite)
+            
         elif args [0] =="init":
             lapiseira.set_thickness(float(args[1]))
         
+        elif args[0] == "remove":
+            lapiseira.remover()
+        
+        elif args[0]=="write":
+            lapiseira.writePage()
+            
         
 main()
